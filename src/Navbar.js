@@ -22,10 +22,10 @@ const Navbar = () => {
                     <img className='w-4 mx-2' src={Facebook} alt="Facebook"></img>
                 </a>
                 <a href="https://www.instagram.com/westernaerodesign/" target="_blank" rel="noreferrer noopener">
-                    <img className='w-6 mx-2 hover:w-2' src={Instagram} alt="Instagram"></img>
+                    <img className='w-6 mx-2' src={Instagram} alt="Instagram"></img>
                 </a>
                 <a href="https://www.linkedin.com/company/aero-design-western" target="_blank" rel="noreferrer noopener">
-                    <img className='w-6 mx-2 hover:w-2' src={Linkedin} alt="Linkedin"></img>
+                    <img className='w-6 mx-2' src={Linkedin} alt="Linkedin"></img>
                 </a>
             </div>
         </header>
