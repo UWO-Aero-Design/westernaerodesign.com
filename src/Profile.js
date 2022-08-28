@@ -5,7 +5,7 @@ const Profile = ({ Image, Name, Title, Year }) => {
         <div>
             <img className="w-32 mx-auto my-1" src={Image} alt={Name}></img>
             <figcaption className="text-center text-gray-800 italic text-sm">
-                {Name}m<br/>
+                {Name}<br/>
                 <span>
                 {Title}<br/>
                 {Year}
