@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/westernaerodesign.com/static/css/main.afbb2fa4.css",
-    "main.js": "/westernaerodesign.com/static/js/main.3742b798.js",
+    "main.js": "/westernaerodesign.com/static/js/main.85a18d23.js",
     "static/js/787.1f7b8cb7.chunk.js": "/westernaerodesign.com/static/js/787.1f7b8cb7.chunk.js",
     "static/media/main.jpeg": "/westernaerodesign.com/static/media/main.b91e99d311a44a8b5a78.jpeg",
     "static/media/team.jpeg": "/westernaerodesign.com/static/media/team.c305a83606d64329be03.jpeg",
@@ -26,11 +26,11 @@
     "static/media/linkedin.svg": "/westernaerodesign.com/static/media/linkedin.272682bbde510681abc060a67302498f.svg",
     "static/media/facebook.svg": "/westernaerodesign.com/static/media/facebook.3168ffbdf19e75cdb647bba60f508185.svg",
     "main.afbb2fa4.css.map": "/westernaerodesign.com/static/css/main.afbb2fa4.css.map",
-    "main.3742b798.js.map": "/westernaerodesign.com/static/js/main.3742b798.js.map",
+    "main.85a18d23.js.map": "/westernaerodesign.com/static/js/main.85a18d23.js.map",
     "787.1f7b8cb7.chunk.js.map": "/westernaerodesign.com/static/js/787.1f7b8cb7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afbb2fa4.css",
-    "static/js/main.3742b798.js"
+    "static/js/main.85a18d23.js"
   ]
 }
