@@ -2,6 +2,8 @@ import Armatec from './assets/sponsors/armatec.png'
 import Siemens from './assets/sponsors/siemens.jpg'
 import Diamond from './assets/sponsors/diamond.png'
 
+//Rename support to industry sponsors (Add Schefeler and London Model RC photos for sponsership)
+
 const Support = () => {
     return (
         <section id="support" className='my-28 w-3/4 mx-auto scroll-m-20'>
