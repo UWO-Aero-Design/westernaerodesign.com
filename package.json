@@ -1,6 +1,6 @@
 {
-  "name": "westernaerodesign.com",
-  "homepage": "westernaerodesign.com",
+  "name": "westerdesign.com",
+  "homepage": "https://www.westernaerodesign.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }
