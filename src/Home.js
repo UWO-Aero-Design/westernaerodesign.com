@@ -4,7 +4,7 @@ const Home = () => {
 
     return (
         <div id='home' className="flex flex-col h-screen">
-            <div className="bg-hero flex flex-grow bg-no-repeat bg-cover mix-blend-multiply">
+            <div className="bg-hero bg-top flex flex-grow bg-no-repeat bg-cover mix-blend-multiply">
                 <div className="m-auto">
                     <div>
                         <img src={Logo} alt="Western Aero Design" className="h-40"></img>

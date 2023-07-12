@@ -1,11 +1,18 @@
 import Profile from './Profile'
 
-const Team = ({Members}) => {
+const Team = ({MechanicalMembers, ControlsMembers}) => {
     return (
-        <section id="team" className='my-20 w-3/4 mx-auto scroll-m-20'>
-            <h1 className='text-center my-5 font-bold text-xl'>Our Team</h1>
+        <section id="team" className='my-16 md:mx-28 mx-12 mx-auto scroll-m-20'>
+            <h1 className='text-center pb-5 mb-10 border-b-2 font-bold text-4xl'>Our Team</h1>
+            <h2 className='font-semibold text-center my-6 text-2xl'>The Mechanical Team</h2> 
             <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                {Members.map((item,index) => {
+                {MechanicalMembers.map((item,index) => {
+                    return <Profile key={index} Image={item.image} Name={item.name} Title={item.title} Year={item.year}/>
+                })}
+            </div>
+            <h2 className='font-medium text-center my-6 text-2xl '>The Controls Team</h2> 
+            <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                {ControlsMembers.map((item,index) => {
                     return <Profile key={index} Image={item.image} Name={item.name} Title={item.title} Year={item.year}/>
                 })}
             </div>
