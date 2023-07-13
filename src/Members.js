@@ -8,7 +8,7 @@ const MechanicalMembers = [
   { name: 'Matthew Soldo', title: 'Mechanical Co-Captain', year: '5th Year Mechanical Engineering w/ Co-Op', image: Matt },
   { name: 'Jamieson Eng', title: 'Mechanical Co-Captain', year: '5th Year Mechanical Engineering w/ Co-Op ', image: placeholder },
   { name: 'Christian Seabrook', title: 'Wing Sr. Lead', year: '5th Year Mechanical & Biomedical Engineering', image: placeholder },
-  { name: 'Brett McDonald', title: 'Fuselage Sr. Lead', year: '5th Year Mechanical Engineering w/ Co-Op', image: placeholder },
+  { name: 'Brett MacDonald', title: 'Fuselage Sr. Lead', year: '5th Year Mechanical Engineering w/ Co-Op', image: placeholder },
   { name: 'Rishi Patel', title: 'Tail Sr. Lead', year: '4th Year Mechatronics Engineering', image: placeholder },
   { name: 'Henry Li', title: 'Landing Gear Sr. Lead', year: '3rd Year Mechanical and Biomedical Engineering ', image: placeholder },
   { name: 'Shreya Chandel', title: 'PADA Mechanical Sr. Lead', year: '5th Year Mechanical Engineering w/ Co-Op ', image: placeholder },

@@ -2,12 +2,24 @@ import plane from "./assets/plane.jpg"
 import plane2 from "./assets/plane2.jpg"
 import plane3 from "./assets/plane3.jpg"
 
+import ImageGallery from "react-image-gallery";
+
+const images = [ 
+    {
+      original: plane,
+    },
+    {
+      original: plane2,
+    },
+    {
+      original: plane3,
+    },
+  ];
+
 const About = () => {
     return (
         <section id="about" className='my-16 md:mx-28 mx-12 mx-auto scroll-m-20'>
             <h1 className='text-center pb-5 mb-10 border-b-2 font-bold text-4xl'>About Us</h1>
-            <div className="md:flex md:flex-row">
-            <div className="flex-auto md:basis-1/2 basis-full">
                     <div>
                     <h2 className='font-medium text-2xl'>Welcome to the home of the Western Aero Design Team</h2> 
                         <div className='text-lg leading-loose'>
@@ -26,17 +38,10 @@ const About = () => {
                             For more information contact us using <a className='font-medium text-purple-700 hover:text-purple-500 transition-all duration-300' href="mailto:western.aerodesign.com">western.aerodesign@gmail.com</a>.
                             </p>  
                         </div>
-
                     </div>
-    
-                </div>
-                <div className="md:pl-32 flex-none gap-12 columns-2 md:basis-1/2 basis-full">
-                        <img className="rounded-lg object-cover w-full h-96 my-48 shadow-xl shadow-stone-500/50" src={plane} alt="plane"></img>
-                        <img className="rounded-lg object-cover w-full h-80 mb-12 shadow-xl shadow-stone-500/50" src={plane2} alt="plane"></img>
-                        <img className="rounded-lg object-cover w-full h-80 mb-12 shadow-xl shadow-stone-500/50	" src={plane3} alt="plane"></img>
-                </div>
-            </div>
- 
+                    <div className="bg-black">
+                    <ImageGallery items={images}/>
+                    </div>
         </section>
     )
 }
