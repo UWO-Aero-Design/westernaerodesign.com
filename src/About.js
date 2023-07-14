@@ -1,6 +1,8 @@
-import plane from "./assets/plane.jpg"
-import plane2 from "./assets/plane2.jpg"
-import plane3 from "./assets/plane3.jpg"
+import plane from "./assets/plane.jpg";
+import plane2 from "./assets/plane2.jpg";
+import plane3 from "./assets/plane3.jpg";
+import plane4 from "./assets/plane4.png";
+import plane5 from "./assets/plane5.jpg";
 
 import ImageGallery from "react-image-gallery";
 
@@ -13,6 +15,12 @@ const images = [
     },
     {
       original: plane3,
+    },
+    {
+      original: plane4,
+    },
+    {
+      original: plane5,
     },
   ];
 
