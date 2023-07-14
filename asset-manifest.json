@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.61c36b58.css",
-    "main.js": "/static/js/main.cd54aab5.js",
+    "main.js": "/static/js/main.4e08cc7b.js",
     "static/js/787.55ab0868.chunk.js": "/static/js/787.55ab0868.chunk.js",
     "static/media/Sponsorship-Package.pdf": "/static/media/Sponsorship-Package.c363e915da4a783cbbf2.pdf",
     "static/media/plane2.jpg": "/static/media/plane2.36f5a1261953e3bccaf0.jpg",
     "static/media/main.jpeg": "/static/media/main.f38342eb7e27bdd3b7af.jpeg",
     "static/media/team.jpeg": "/static/media/team.3dcec29f1f3f6e41907d.jpeg",
+    "static/media/plane4.png": "/static/media/plane4.18f72848e9ae427c985f.png",
+    "static/media/plane5.jpg": "/static/media/plane5.c0b96931b636a7f90f0b.jpg",
     "static/media/plane3.jpg": "/static/media/plane3.c1dd7de3d19e2dee2078.jpg",
     "static/media/plane.jpg": "/static/media/plane.b7e10210a64fd9f97936.jpg",
     "static/media/design2reality.png": "/static/media/design2reality.9e37aa4155cd178a6a3d.png",
@@ -27,11 +29,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.272682bbde510681abc060a67302498f.svg",
     "static/media/facebook.svg": "/static/media/facebook.3168ffbdf19e75cdb647bba60f508185.svg",
     "main.61c36b58.css.map": "/static/css/main.61c36b58.css.map",
-    "main.cd54aab5.js.map": "/static/js/main.cd54aab5.js.map",
+    "main.4e08cc7b.js.map": "/static/js/main.4e08cc7b.js.map",
     "787.55ab0868.chunk.js.map": "/static/js/787.55ab0868.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61c36b58.css",
-    "static/js/main.cd54aab5.js"
+    "static/js/main.4e08cc7b.js"
   ]
 }
