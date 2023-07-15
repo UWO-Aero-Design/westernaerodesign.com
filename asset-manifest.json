@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.61c36b58.css",
-    "main.js": "/static/js/main.0a27ca8e.js",
+    "main.js": "/static/js/main.e0377cb6.js",
     "static/js/787.55ab0868.chunk.js": "/static/js/787.55ab0868.chunk.js",
     "static/media/Sponsorship-Package.pdf": "/static/media/Sponsorship-Package.c363e915da4a783cbbf2.pdf",
-    "static/media/plane2.jpg": "/static/media/plane2.36f5a1261953e3bccaf0.jpg",
     "static/media/main.jpeg": "/static/media/main.f38342eb7e27bdd3b7af.jpeg",
     "static/media/team.jpeg": "/static/media/team.3dcec29f1f3f6e41907d.jpeg",
     "static/media/plane4.png": "/static/media/plane4.18f72848e9ae427c985f.png",
-    "static/media/plane3.jpg": "/static/media/plane3.c1dd7de3d19e2dee2078.jpg",
+    "static/media/plane3.png": "/static/media/plane3.1090b88035988c306eda.png",
     "static/media/plane.jpg": "/static/media/plane.b7e10210a64fd9f97936.jpg",
+    "static/media/plane6.png": "/static/media/plane6.1df68ba72e0430d956e4.png",
     "static/media/plane5.jpg": "/static/media/plane5.6fe41cb5e77d11ec5cc3.jpg",
     "static/media/design2reality.png": "/static/media/design2reality.9e37aa4155cd178a6a3d.png",
+    "static/media/plane2.png": "/static/media/plane2.cbe4da90bc683663a6fc.png",
     "static/media/diamond.png": "/static/media/diamond.56b70def099abec7d3ed.png",
     "static/media/siemens.jpg": "/static/media/siemens.af37aa2caee2e3fd2119.jpg",
     "static/media/logo.png": "/static/media/logo.d2c3b417bad5c2ceede5.png",
@@ -29,11 +30,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.272682bbde510681abc060a67302498f.svg",
     "static/media/facebook.svg": "/static/media/facebook.3168ffbdf19e75cdb647bba60f508185.svg",
     "main.61c36b58.css.map": "/static/css/main.61c36b58.css.map",
-    "main.0a27ca8e.js.map": "/static/js/main.0a27ca8e.js.map",
+    "main.e0377cb6.js.map": "/static/js/main.e0377cb6.js.map",
     "787.55ab0868.chunk.js.map": "/static/js/787.55ab0868.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61c36b58.css",
-    "static/js/main.0a27ca8e.js"
+    "static/js/main.e0377cb6.js"
   ]
 }
