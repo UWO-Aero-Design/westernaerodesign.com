@@ -1,8 +1,8 @@
 import plane from "./assets/plane.jpg";
-import plane2 from "./assets/plane2.jpg";
-import plane3 from "./assets/plane3.jpg";
+import plane2 from "./assets/plane2.png";
+import plane3 from "./assets/plane3.png";
 import plane4 from "./assets/plane4.png";
-import plane5 from "./assets/plane5.jpg";
+import plane5 from "./assets/plane5.png";
 
 import ImageGallery from "react-image-gallery";
 
@@ -48,7 +48,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="bg-black">
-                    <ImageGallery items={images}/>
+                    <ImageGallery items={images} autoPlay={true} lazyLoad={true} slideInterval={4000}/>
                     </div>
         </section>
     )
