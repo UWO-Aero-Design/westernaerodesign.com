@@ -6,14 +6,15 @@ import Linkedin from './assets/linkedin.svg'
 const Navbar = () => {
 
     return (
-        <header className='sticky top-0 w-screen justify-center md:flex align-center bg-white bg-opacity-80 z-20 shadow-lg py-2 hidden '>
+        <header className='sticky top-0 w-screen justify-center md:flex align-center bg-white bg-opacity-80 h-16 shadow-lg py-2 hidden'>
             <a className='navbar-item w-12 my-auto' href="#home">
                 <img src={Logo} alt="Western Aero Design"></img>
             </a>
             <div className='flex mx-32'>
-                <a className='navbar-item' href="#home"><p>Home</p></a>
+                <a className='navbar-item' href="#home" ><p>Home</p></a>
                 <a className='navbar-item' href="#about"><p>About</p></a>
                 <a className='navbar-item' href="#team"><p>Team</p></a>
+                <a className='navbar-item' href='#gallery'><p>Gallery</p></a>
                 <a className='navbar-item' href="#support"><p>Support</p></a>
                 <a className='navbar-item' href="#contact"><p>Contact</p></a>
             </div>
