@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import Home from './Home'
 import About from './About'
 import Team from './Team'
-import Members from './Members'
+import {MechanicalMembers, ControlsMembers} from './Members'
 import Contact from './Contact'
 import Support from './Support'
 
@@ -14,7 +14,7 @@ function App() {
 			<Navbar />
 			<Home />
 			<About />
-			<Team Members={Members}/>
+			<Team MechanicalMembers={MechanicalMembers} ControlsMembers={ControlsMembers}/>
 			<Parallax Image='bg-team' />
 			<Support />
 			<Contact />
