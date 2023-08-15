@@ -19,7 +19,7 @@ function App() {
 	const getFinalFactor = () => {
 		if (size.width) {
 			if (size.width <= MD) {
-				return (12.1);
+				return (15.4);
 			} else if (size.width <= LG) {
 				return (8.4);
 			} else {
