@@ -21,3 +21,10 @@ html {
     animation-delay: 800ms;
   }
 }
+
+.scrollbar-hide{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
