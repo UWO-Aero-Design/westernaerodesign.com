@@ -1,5 +1,3 @@
-import { ParallaxLayer } from '@react-spring/parallax'
-
 import vid from "./assets/planeVideo.mp4"
 
 import { useWindowSize } from "@uidotdev/usehooks";
@@ -9,13 +7,11 @@ const About = () => {
   const size = useWindowSize();
 
   return (
-    <ParallaxLayer offset={1}>
       <section id="about" className='mx-auto scroll-m-20'>
         <div className="flex relative h-full" style={{aspectRatio: `${size.width}/${size.height}`}}>
             <video autoPlay loop muted className="object-cover w-full">
               <source src={vid} />
             </video>
-            <ParallaxLayer speed={0.8} offset={0.99}>
               <div className='text-lg leading-loose lg:my-16 m-8 lg:w-1/2 absolute lg:right-16 bg-black/70 text-gray-300 lg:p-10 p-4'>
               <h1 className='text-center lg:pb-5 pb-2 mb-2 lg:mb-10 border-b-2 font-bold lg:text-4xl text-2xl'>About Us</h1>
 
@@ -36,12 +32,9 @@ const About = () => {
                               For more information contact us using <a className='font-medium text-purple-700 hover:text-purple-500 transition-all duration-300' href="mailto:western.aerodesign.com">western.aerodesign@gmail.com</a>.
                               </p>   */}
             </div>
-            </ParallaxLayer>
 
         </div>
       </section>
-
-    </ParallaxLayer>
   )
 }
 
