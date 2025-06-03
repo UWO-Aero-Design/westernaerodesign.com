@@ -1,0 +1,267 @@
+.tiers-section {
+  background-color: #fafafa;
+}
+
+.tiers-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.tiers-header h2 {
+  font-size: 2rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+}
+
+.tiers-header p {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tier-card {
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.tier-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(79, 38, 131, 0.15);
+  border-color: var(--light-purple);
+}
+
+.tier-card.popular {
+  border-color: var(--primary-purple);
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(79, 38, 131, 0.2);
+}
+
+.tier-card.popular:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* Tier-specific styling for differentiation */
+.tier-card.subsonic {
+  border-left: 4px solid #6366f1;
+}
+
+.tier-card.subsonic .tier-name {
+  color: #6366f1;
+}
+
+.tier-card.supersonic {
+  border-left: 4px solid var(--primary-purple);
+}
+
+.tier-card.supersonic .tier-name {
+  color: var(--primary-purple);
+}
+
+.tier-card.hypersonic {
+  border-left: 4px solid #d946ef;
+}
+
+.tier-card.hypersonic .tier-name {
+  color: #d946ef;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--primary-purple), var(--light-purple));
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(79, 38, 131, 0.3);
+}
+
+.tier-header {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.tier-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.tier-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.tier-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark-purple);
+  margin-bottom: 0.3rem;
+}
+
+.tier-benefits {
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tier-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.tier-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  color: var(--text-gray);
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 0.9rem;
+}
+
+.tier-benefits li:last-child {
+  border-bottom: none;
+}
+
+.tier-benefits svg {
+  color: var(--primary-purple);
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.tier-special-note {
+  background: linear-gradient(135deg, #f8f9ff, #f0f2ff);
+  border: 1px solid var(--light-purple);
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--dark-purple);
+  text-align: left;
+}
+
+.tier-special-note svg {
+  color: var(--primary-purple);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  width: 14px;
+  height: 14px;
+}
+
+.tier-cta {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-purple);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.tier-cta:hover {
+  background: var(--dark-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 38, 131, 0.3);
+}
+
+.tier-card.popular .tier-cta {
+  background: linear-gradient(135deg, var(--primary-purple), var(--light-purple));
+  box-shadow: 0 6px 20px rgba(79, 38, 131, 0.3);
+}
+
+.tier-card.popular .tier-cta:hover {
+  box-shadow: 0 8px 30px rgba(79, 38, 131, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .tiers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 450px;
+    margin: 0 auto 1rem;
+  }
+  
+  .tier-card {
+    min-height: auto;
+  }
+  
+  .tier-card.popular {
+    transform: none;
+  }
+  
+  .tier-card.popular:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .tiers-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .tier-card {
+    padding: 1.2rem 1rem;
+  }
+  
+  .tier-name {
+    font-size: 1.3rem;
+  }
+  
+  .tier-price {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tier-card {
+    padding: 1rem 0.8rem;
+  }
+  
+  .tier-name {
+    font-size: 1.2rem;
+  }
+  
+  .tier-price {
+    font-size: 1.6rem;
+  }
+  
+  .tier-benefits li {
+    font-size: 0.85rem;
+  }
+} 

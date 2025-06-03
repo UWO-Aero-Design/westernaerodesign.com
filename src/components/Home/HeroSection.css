@@ -1,0 +1,329 @@
+:root {
+  --hero-font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --hero-text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  --hero-glow-shadow: 0 0 20px rgba(143, 85, 224, 0.3);
+  --hero-transition: all 0.3s ease;
+  --hero-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Video Background */
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 38, 131, 0.4) 0%, rgba(143, 85, 224, 0.3) 50%, rgba(32, 20, 54, 0.5) 100%);
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Team Logo */
+.hero-logo {
+  margin-bottom: 2rem;
+  /* animation: float 6s ease-in-out infinite; */
+}
+
+.hero-logo img {
+  height: 200px;
+  filter: drop-shadow(0 8px 32px rgba(79, 38, 131, 0.4));
+  transition: var(--hero-transition);
+}
+
+.hero-logo:hover img { transform: scale(1.05); }
+
+/* Remove the float animation keyframes since they're no longer needed */
+/*
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+*/
+
+.hero-slogan {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 3rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: var(--hero-text-shadow);
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: var(--hero-text-shadow), var(--hero-glow-shadow); }
+  to { text-shadow: var(--hero-text-shadow), 0 0 30px rgba(143, 85, 224, 0.6); }
+}
+
+/* Achievement Counters */
+.achievement-counters {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  animation: slideUp 1s ease 0.3s both;
+}
+
+.achievement-item { text-align: center; }
+
+.achievement-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--light-purple);
+  text-shadow: 
+    var(--hero-text-shadow),
+    0 0 20px rgba(143, 85, 224, 0.4),
+    0 0 40px rgba(143, 85, 224, 0.2);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  position: relative;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(143, 85, 224, 0.3));
+}
+
+.achievement-number:hover {
+  transform: scale(1.05);
+  text-shadow: 
+    var(--hero-text-shadow),
+    0 0 25px rgba(143, 85, 224, 0.6),
+    0 0 50px rgba(143, 85, 224, 0.4);
+  filter: drop-shadow(0 6px 12px rgba(143, 85, 224, 0.4));
+}
+
+.achievement-number::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-purple), var(--light-purple));
+  border-radius: 2px;
+  box-shadow: 
+    0 2px 8px rgba(143, 85, 224, 0.4),
+    0 0 15px rgba(143, 85, 224, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-number:hover::after {
+  width: 50px;
+  box-shadow: 
+    0 2px 12px rgba(143, 85, 224, 0.6),
+    0 0 20px rgba(143, 85, 224, 0.5);
+}
+
+.achievement-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Dynamic Text */
+.dynamic-text-container {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  animation: slideUp 1s ease 0.6s both;
+  font-family: var(--hero-font-family);
+  padding-top: 20px;
+}
+
+.we-text, .action-word, .object-word {
+  font-weight: 300;
+  text-shadow: var(--hero-text-shadow);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.we-text {
+  color: rgba(255, 255, 255, 0.95);
+  margin-right: 0.5rem;
+}
+
+.rotating-words {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  overflow: visible;
+  min-width: 380px;
+  justify-content: flex-start;
+}
+
+.action-word, .object-word {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  white-space: nowrap;
+  position: relative;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+.action-word {
+  color: var(--light-purple);
+  margin-right: 0.5rem;
+  min-width: 100px;
+  text-align: center;
+}
+
+.object-word {
+  color: rgba(255, 255, 255, 0.95);
+  min-width: 260px;
+  text-align: left;
+}
+
+.action-word.rotating-up { transform: translateY(-40px); opacity: 0; }
+.object-word.rotating-down { transform: translateY(40px); opacity: 0; }
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: slideUp 1s ease 0.9s both;
+}
+
+.hero-actions .btn {
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: var(--hero-transition);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-actions .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0 -100% 0 -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hero-actions .btn:hover::before { left: 100%; }
+.hero-actions .btn:hover { transform: translateY(-3px); }
+
+.hero-actions .btn-primary {
+  background: var(--primary-purple);
+}
+
+.hero-actions .btn-primary:hover {
+  background: var(--dark-purple);
+  box-shadow: 0 12px 40px rgba(79, 38, 131, 0.5);
+}
+
+.hero-actions .btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Floating particles */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(143, 85, 224, 0.4), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: sparkle 20s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  to { transform: translateY(-100px); }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-logo img { height: 240px; }
+  .hero-slogan { font-size: 1.4rem; letter-spacing: 2px; }
+  
+  .achievement-counters { 
+    flex-direction: row; 
+    gap: 1.5rem; 
+    justify-content: center;
+  }
+  .achievement-number { font-size: 2.8rem; }
+  .achievement-label { font-size: 0.9rem; }
+  
+  .dynamic-text-container { font-size: 1.4rem; height: 60px; padding-top: 15px; }
+  .we-text, .action-word, .object-word { font-size: 1.4rem; letter-spacing: 2px; }
+  .we-text, .action-word { margin-right: 0.3rem; }
+  .rotating-words { 
+    gap: 0.3rem; 
+    min-width: 300px;
+  }
+  .action-word { min-width: 80px; }
+  .object-word { min-width: 200px; }
+  
+  .hero-actions { flex-direction: column; align-items: center; gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-logo img { height: 180px; }
+  .hero-slogan { font-size: 1.2rem; letter-spacing: 1px; }
+  
+  .achievement-counters { gap: 1rem; }
+  .achievement-number { font-size: 2.2rem; }
+  .achievement-label { font-size: 0.8rem; }
+  
+  .dynamic-text-container { font-size: 1rem; height: 50px; padding-top: 12px; }
+  .we-text, .action-word, .object-word { font-size: 1rem; letter-spacing: 1px; }
+  .rotating-words { 
+    min-width: 240px;
+  }
+  .action-word { min-width: 60px; }
+  .object-word { min-width: 160px; }
+}
+
+@supports not (backdrop-filter: blur(15px)) {
+  .hero-actions .btn { background-color: rgba(79, 38, 131, 0.9); }
+  .hero-actions .btn-outline { background-color: rgba(255, 255, 255, 0.2); }
+} 

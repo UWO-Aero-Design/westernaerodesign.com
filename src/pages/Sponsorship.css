@@ -1,0 +1,21 @@
+.sponsorship-page {
+  margin-top: 80px; /* Account for fixed navigation */
+}
+
+.sponsorship-page .section {
+  padding: 2rem 0; /* Reduced from 3rem 0 */
+}
+
+.sponsorship-page .section:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.sponsorship-page .section:nth-child(odd) {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .sponsorship-page .section {
+    padding: 1.5rem 0; /* Reduced from 2rem 0 */
+  }
+}

@@ -1,48 +1,36 @@
-import Navbar from './Navbar'
-import Home from './Home'
-import About from './About'
-import Gallery from "./Gallery";
-import Team from './Team'
-import { MechanicalMembers, ControlsMembers } from './Members'
-import Contact from './Contact'
-import Support from './Support'
-
-import { useWindowSize } from "@uidotdev/usehooks";
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './components/layout/Navigation';
+import Footer from './components/layout/Footer';
+import ScrollToTop from './utils/ScrollToTop';
+import ScrollProgress from './components/common/ScrollProgress';
+import Home from './pages/Home';
+import Team from './pages/Team';
+import History from './pages/History';
+import Join from './pages/Join';
+import Sponsorship from './pages/Sponsorship';
+import './App.css';
 
 function App() {
-	const MD = 768;
-	const LG = 1024;
-
-	const size = useWindowSize();
-
-	const getFinalFactor = () => {
-		if (size.width) {
-			if (size.width <= MD) {
-				return (15.4);
-			} else if (size.width <= LG) {
-				return (8.4);
-			} else {
-				return (5.9);
-			}
-		}
-	}
-
-	return (
-		<div className='scroll-smooth scrollbar-hide'>
-			<Navbar />
-			<Parallax pages={2 + getFinalFactor()}>
-				<Home />
-				<About />
-				<ParallaxLayer offset={2}>
-					<Team MechanicalMembers={MechanicalMembers} ControlsMembers={ControlsMembers} />
-					<Gallery />
-					<Support />
-					<Contact />
-				</ParallaxLayer>
-			</Parallax>
-		</div>
-	);
+  return (
+    <Router>
+      <div className="App">
+        <ScrollToTop />
+        <ScrollProgress />
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/sponsorship" element={<Sponsorship />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
