@@ -1,0 +1,477 @@
+:root {
+  --team-primary: var(--primary-purple);
+  --team-secondary: var(--light-purple);
+  --team-text: #333;
+  --team-text-light: #666;
+  --team-bg: #f8f9ff;
+  --team-white: white;
+  --team-shadow: rgba(143, 85, 224, 0.1);
+  --team-shadow-hover: rgba(143, 85, 224, 0.2);
+  --team-transition: all 0.3s ease;
+  --team-border-radius: 8px;
+  
+  /* Card dimensions - much larger profile picture sizes */
+  --card-image-sm: 80px;   /* Increased from 60px */
+  --card-image-md: 100px;  /* Increased from 70px */
+  --card-image-lg: 110px;  /* Increased from 80px */
+  --card-image-xl: 120px;  /* Increased from 90px */
+  --card-padding: 0.8rem;
+  --card-gap: 0.8rem;
+}
+
+.team-page {
+  padding-top: 80px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--team-bg) 0%, #f0f2ff 100%);
+}
+
+.team-header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: var(--team-white);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--team-shadow);
+}
+
+.team-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--team-primary);
+  margin-bottom: 0.3rem;
+}
+
+.team-header p {
+  font-size: 0.9rem;
+  color: var(--team-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Section base styles */
+.team-page section {
+  background: var(--team-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--team-shadow);
+  margin-bottom: 1.5rem;
+}
+
+.team-page section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--team-primary);
+  text-align: center;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.team-page section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--team-primary), var(--team-secondary));
+  border-radius: 2px;
+}
+
+/* Section header with legend */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.project-legend {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--team-text-light);
+  font-weight: 500;
+}
+
+.legend-item .project-badge {
+  position: static;
+  margin: 0;
+}
+
+/* Base team member card */
+.team-member-card {
+  background: var(--team-white);
+  border-radius: var(--team-border-radius);
+  padding: var(--card-padding);
+  box-shadow: 0 2px 12px var(--team-shadow);
+  transition: var(--team-transition);
+  text-align: center;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--team-primary), var(--team-secondary));
+  opacity: 0;
+  transition: var(--team-transition);
+}
+
+.team-member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--team-shadow-hover);
+  border-color: var(--team-secondary);
+}
+
+.team-member-card:hover::before {
+  opacity: 1;
+}
+
+/* Card variants */
+.team-member-card.not-filled {
+  background: rgba(248, 248, 248, 0.8);
+  border: 1px dashed #ddd;
+  opacity: 0.7;
+}
+
+.team-member-card.not-filled:hover {
+  transform: none;
+  border-color: var(--team-secondary);
+}
+
+/* Member image */
+.member-image-container {
+  margin-bottom: 0.6rem;
+}
+
+.member-image {
+  width: var(--card-image-md);
+  height: var(--card-image-md);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--team-secondary);
+  transition: var(--team-transition);
+}
+
+.team-member-card.director .member-image {
+  width: var(--card-image-lg);
+  height: var(--card-image-lg);
+}
+
+.member-image-placeholder {
+  width: var(--card-image-md);
+  height: var(--card-image-md);
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #999;
+  border: 1px dashed #ddd;
+}
+
+.team-member-card.director .member-image-placeholder {
+  width: var(--card-image-lg);
+  height: var(--card-image-lg);
+}
+
+/* Member info */
+.member-info {
+  flex-grow: 1;
+}
+
+.member-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--team-text);
+  margin-bottom: 0.15rem;
+  line-height: 1.1;
+}
+
+.member-role {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--team-primary);
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
+}
+
+.team-member-card.not-filled .member-role {
+  color: var(--team-text);
+}
+
+.member-major {
+  font-size: 0.55rem;
+  color: var(--team-text-light);
+  margin-bottom: 0.15rem;
+  line-height: 1.1;
+}
+
+.member-year {
+  font-size: 0.55rem;
+  color: var(--team-secondary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.position-available {
+  font-size: 0.6rem;
+  color: var(--team-text-light);
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+/* Social links */
+.member-socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.team-member-card .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50%;
+  background: rgba(143, 85, 224, 0.1);
+  color: var(--team-primary);
+  text-decoration: none;
+  transition: var(--team-transition);
+}
+
+.team-member-card .social-link:hover {
+  background: var(--team-primary);
+  color: var(--team-white);
+  transform: scale(1.1);
+}
+
+.team-member-card .social-link svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* Grid layouts */
+.executives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--card-gap);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team-grid,
+.operations-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--card-gap);
+}
+
+.discipline-team {
+  margin-bottom: 1.5rem;
+}
+
+.discipline-team:last-child {
+  margin-bottom: 0;
+}
+
+.discipline-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--team-primary);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* Project badges */
+.project-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.project-badge.advanced {
+  background: #8B5CF6;
+}
+
+.project-badge.regular {
+  background: #06B6D4;
+}
+
+/* Alumni section */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--card-gap);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.alumni-card {
+  background: var(--team-white);
+  border-radius: var(--team-border-radius);
+  padding: 1rem;
+  box-shadow: 0 2px 12px var(--team-shadow);
+  transition: var(--team-transition);
+  text-align: center;
+}
+
+.alumni-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px var(--team-shadow-hover);
+}
+
+.alumni-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--team-text);
+  margin-bottom: 0.2rem;
+}
+
+.alumni-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--team-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.alumni-major {
+  font-size: 0.7rem;
+  color: var(--team-text-light);
+  line-height: 1.3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    --card-image-sm: 70px;   /* Increased from 50px */
+    --card-image-md: 85px;   /* Increased from 60px */
+    --card-image-lg: 95px;   /* Increased from 70px */
+    --card-image-xl: 105px;  /* Increased from 80px */
+    --card-padding: 0.6rem;
+    --card-gap: 0.6rem;
+  }
+
+  .team-header {
+    padding: 1.2rem 1rem;
+  }
+
+  .team-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .project-legend {
+    gap: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .executives-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .team-grid,
+  .operations-members {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .alumni-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member-card.director {
+    transform: scale(1.01);
+  }
+
+  .team-member-card.director:hover {
+    transform: scale(1.02) translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --card-image-sm: 60px;   /* Increased from 45px */
+    --card-image-md: 75px;   /* Increased from 55px */
+    --card-image-lg: 85px;   /* Increased from 65px */
+    --card-image-xl: 95px;   /* Increased from 75px */
+    --card-padding: 0.5rem;
+    --card-gap: 0.5rem;
+  }
+
+  .team-page {
+    padding-top: 70px;
+  }
+
+  .team-header {
+    padding: 1rem 0.5rem;
+  }
+
+  .team-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .team-member-card .social-link {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .team-member-card .social-link svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .discipline-title {
+    font-size: 1.1rem;
+  }
+
+  .team-grid,
+  .operations-members {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  .project-legend {
+    gap: 0.8rem;
+    font-size: 0.65rem;
+  }
+
+  .executives-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+  .team-member-card.director {
+    transform: scale(1.005);
+  }
+
+  .team-member-card.director:hover {
+    transform: scale(1.01) translateY(-1px);
+  }
+} 

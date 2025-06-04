@@ -1,0 +1,350 @@
+
+Sections:
+- Top Bar:
+    - Home
+    - Team
+    - History
+    - Join
+    - Blog
+    - Sponsor Us button on far right
+    - Documentation
+
+- Home page:
+    (Purpose of page, this is really for outsiders who want to get a glance on what the team does, and be validated that the team is legit and actually does shit and compete, its the social proof, so keep that in mind)
+    - Team Name and Logo so they immediately know
+        - Western Aero Design (actually just don't do our logo, just say western aero design in purple)
+            - Have our slogan sorta under it, and cool effects to it. (Design. Build. Fly.)
+        - Have western engineering logo in there
+        - Have a component that switches and says (We Build High Lift RC Planes), (We Build Delivery Drones) etc, where the We Build stays, but the other part changes in a cool effect.
+    - Trailer Video
+        - Have it be in the middle, make it easy to play
+    - About Us
+        - We are Western Aero Design
+        - We compete annually in the SAE Aero Design competition
+        - We are the premeir and pretty much only aerospace team in western university
+        - We build planes, drones and VTOL aircraft
+        - What sets us apart:
+            - We are one of the few teams without an aerospace program, so we are fully self taught
+    - Photo carousel
+        - A carousel of candid and cool team photos that simple and elegant
+        - When it reaches the end, it seemlessly goes to start like a ring (if it shows 4 photos at a time, [7, 8, 9, 10] transitions to [8, 9, 10, 0], to [9, 10, 0, 1])
+    - Sponsor Logos
+        - Add the sponsor with tiers component down here
+        - When you hover over a sponsor's logo, it brings down a description of what they do and also has link to their website
+        
+
+- Team page:
+    - (Purpose of page, The team page exists to clearly establish and legitimize the leadership structure, showing who drives the team’s mission forward. It celebrates the contributions of all members, reinforcing a sense of pride, belonging, and aspiration within the team. Externally, it projects professionalism and unity—inviting sponsors, faculty, and future recruits to see the team as credible, mission-driven, and worth supporting.)
+    - (Purpose of page 2, Show who's in charge, what roles exist and how responsibility is structured)
+    - Current team leads
+            Organize the structure like a heirachy, where the more senior the bigger the card
+            Captain -> Technical Directors -> Senior Leads -> Junior Leads
+            When you get under the technical directors, so senior and junior leads, they will be split into two sections
+            advanced class and regular class, where each of the cards will be in their respective one
+            when you hover over advanced or regular class bar it will like dropdown and give brief background on what each is about.
+                Advanced class, desiging a autonmous VTOl aircraft which can deliver and pickup packages.
+                Regular class, designing a 10-15 foot high lift rc plane.
+        - Team captain
+            - Full name, photo
+            - A section on vision, leadership and strategic focus
+            - Links to socials (linkedin, email)
+        - Technical Directors (Mechanical, Electrical, Software)
+            - Name, Role, Photo
+            - Links to socials
+        - Subsystem leads (Senior leads)
+            - Name, Role, Photo
+        - Junior leads
+            - Name, Role, Photo
+            - Links to socials
+            - Emphasize junior is less than senior and they aren't equal visually
+
+    - Alumni
+        This section is for important past alumni, honour them, show legacy and credability and inspire future members
+        Focus on past captains and extrodinary contribuators
+        Information:
+            - Role
+            - Years active (2020-2026)
+            - Current role (Turion aerospace lead flight software engineer)
+            - Include linkedin
+- History
+    (Purpose of page, is to show the history and legitamcy of the team through its 25 year history, show pride of our history, give sponsors confidence, make new and current team members feel like they're part of something bigger and make them more committed) 
+    - Timeline start going back years to the oldest and go to the present
+    - Its a vertical line with points on it, alternating on either side with photos and the text
+    (team started in 1999, first compete in 2001), say team was active for X years, where x is a variable in the javascript that is from 1999, so it updates on its own)
+    - Use the more details below to build this timeline
+
+- Join
+    (Purpose of page, this page is for perspective students who want to know about the team and what it does in details, the goal is to provide enough detail to show them what we do, and also provide a way for them to get involved with the team, by "Applying" for a specific team)
+    (The hope of this page is to include to cool stuff our team actually does to appeal to as many disciplines as possible)
+    (Better word the stuff so they seem professional)
+    Mechanical:
+        - Composites: wing, spar,
+            - Photo of manufacturing composite wing layup
+            - Photo of composite fuselage infusion
+        - Structural:
+            - Photo of fuselage struss structure
+        - Aerodyanmics & Simulation: FEA, flow simulation
+            - Photo of flow simulation
+            - Photo of FEA on wing
+        They build the airfram structure
+        Do the aeryodynamics 
+    Electrical:
+        - Creating wireharnesses
+        - Designing custom PCBs
+        - Integrating sensors (IMU, Barometers, Airspeed) and actuators (servos, motors)
+    Software:
+        - Webdevelopment (React)
+            - We use to make custom tools for the team
+            - We use to create our team website
+            - Deploy on the cloud (AWS)
+            - Design our ground station software
+        - Embedded Software
+            - Develop flight software in C++
+    Operations:
+        - Fund raise and get sponsors
+        - Social media and team presense
+    Application by discipline:
+        Electrical:
+            - Develop PCBs for onboard system
+        Mechanical:
+            - Design the airframe
+            - Manufacture structur
+        Mechatronics:
+            - Integrate sensors and actuators
+                (Airspeed, Accelerometers, Barometer)
+            - Develop flight control models (Extended Kalman Filter)
+        Software:
+            - Build and deploy React internal tools on the cloud
+        
+- Sponsorship page:
+    (Purpose of page, this page is meant ask for the generosity and support of sponsors, it should convince them to make an impact. They should feel inspired that they're investing in the future of engineering and with some focus on aerospace, they should feel needed, their direct support enables our student success and innovation, they should feel proud of building something meaningful and impactful, they should feel confident that we're legit and we're an excellent invesmtnet for them.)
+    - Introduction
+        - This section tells them why sponsorship is import, why we need them, and how they support us.
+    - Sponsorship Tiers:
+        - A stripe like cards for "purchase" tiers, in our case sponsorship.
+        
+        1. Subsonic:
+            - $500+
+            - Logo on website
+            - Thank you social media post
+        2. Supersonic: (Most popular tag on it)
+            - $1500+
+            - Logo on website
+            - Thank you social media post
+            - Logo on team banner (small)
+            - Logo on t-shirt (small)
+            - Logo on plane (small)
+        3. Hypersonic:
+            - $5000+
+            - Logo on website
+            - Logo on team banner
+            - Thank you social media post
+            - Logo on team banner (large)
+            - Logo on t-shirt (large)
+            - Logo on plane (large)
+        - Add somewhere where it says, largest sponsor gets logo on front of our t-shirt
+        - Right under the call to action is Get Started, and it sends them to the contact us prefill thing
+
+    - Carousel
+        - Photo carousel with pictures with our sponsors in design reviews and tours
+    - Contact Us section:
+        - A page where they can add their contact info, their company, request the interested sponsorship tier,
+        - The contact us section should be framed like they're sending an inquiry basically requesting our sponsorship package
+        - To the left of it is like supporting information saying like support hands on engineering, ...
+        - Stress how none of what we do can be done without the help of our sponsors, they are building the future ..,
+    - FAQ section:
+        - about common things, 
+- Blog:
+    (Purpose of page, the purpose of the blog page is a way to publically store team knowledge, it forces members to actually output high quality technical blogs while sharing it with the world, other teams, teams in our university and even sponsors)
+    - Main Blog Page
+        Simple with cards for each blog based on time added.
+        Each blog has an image card and a title
+    - Blog page
+        The blog is really a markdown file that is rendered to the page.
+        It will be like a medium style blog with text and images.
+
+- Documentation
+    - Requires login
+    - A navigation menu on the left side
+        - Expanded for each page of Documentation
+    - Similar to blog, use markdown files 
+
+Details:
+
+    - Team
+        - Current team leads
+            - Captain: Khathab Hamed
+            - Technical Directors:
+                - Mechanical Technical Director: Josh Ray
+                - Electrical Technical Director: NOT FILLED
+                - Software Technical Director: NOT FILLED
+                - Recruitment Director: NOT FILLED
+            - Senior Leads
+                - Wing & Fuselage Lead (Advanced): Harvey Yin
+                - Tail Assembly Lead (Advanced): NOT FILLED
+                - Payload Systems Lead (Advanced): NOT FILLED
+                - Flight Software Lead (Advanced): NOT FILLED
+                - Simulation and Tooling Lead (Advanced): NOT FILLED
+                - Propulsion Assembly Lead (Advanced): NOT FILLED
+                - Power Systems Lead (Regular & Advanced): NOT FILLED
+                - Avionics and Sensors Lead (Regular & Advanced): NOT FILLED
+                - Wing Lead (Regular): Filip Figiel & Andres Monroy
+                - Fuselage Lead (Regular): NOT FILLED
+                - Tail Assembly Lead (Regular): NOT FILLED
+                - Landing Systems Lead (Regular): NOT FILLED
+                - Social Media Lead (Operations): NOT FILLED
+                - Sponsorship Lead (Operations): NOT FILLED
+
+
+        - Alumni
+            - John Langlois
+                - Years active: 2021 to 2025
+                - Role: 2024 Controls Team Captain
+                - Current Role: Software Engineer & Scelta, linkedin: https://www.linkedin.com/in/john-langlois-275448211/
+            - Jeff St. Jean
+                - Years active: 2020 - 2024
+                - Role: 2024 Controls Team Captain
+                - Current Role: Lead Flight Software Engineer & Turion Space, linkedin: https://www.linkedin.com/in/jeffstjean/
+            - Mathew Soldo
+                - Years active: 2021 - 2024
+                - Role: 2024 Mechanical Team Captain
+                - Current role: Design Engineering & Diamond Aircraft, linkedin: https://www.linkedin.com/in/matthew-soldo-680b94199/
+            - Channey Kim
+                Years active: Member 2020 - 2023
+                Role: 2023 Mechanical Team Captain
+                Current role: Consulting Analsyt & Accenture, linkedin: https://www.linkedin.com/in/channey-kim-0847a4144
+            - Mike Tryggvason
+                Years active: Member 2006 - 2009
+                Role:
+                Current role: Aerobatic Pilot, instagram: https://www.instagram.com/miketryg/
+
+    - History:
+        - Founded in 1999
+        - Flying Mustangs (our old team name) takes flight in Palmdale, California in 2000
+        - Real club founded in 2001?
+        - Founded as a capstone project by Jason Grzela and Irena Piasecka
+        - Timeline of photos:
+            - 2001
+                - Western Aero Design takes flight in Palmdale, California competing in SAE Aero Design West.
+                - 21/37
+            - 2002
+                - Aero Design West
+                - Team places 35/42
+            - 2003
+                - Aero Design West
+                - 21/39
+            - 2004
+                - UWO Aero Design new name
+                - Aero Design West
+                - 36/49
+                - Team almost gets Top 15, but recieves a major penalty
+            - 2005
+                - Competed in Aero Design West
+                - 47th out of 49
+            - 2006
+                - Don't know if we competed, we likley did, no score on website tho
+            - 2007
+                - Compete in Aero Design East
+                - 39/51
+            - 2008
+                - Team forgot to register for competition
+            - 2009
+                - Team didn't compete
+                - The team tries to compete in the australia outback challenge
+            - 2010
+                - Team didn't compete
+            - 2011
+                - Team comes back from Haitus
+                - Aero Design West
+                - 15/34
+            - 2012
+                - Aero Design West
+                - 10/35
+            - 2013
+                - Aero Design East
+                - Started doing Micro class in addition to advanced class
+                - 15/23
+            - 2014
+                - Aero Design West
+                - Competes in advanced class
+                    - 3/17 teams
+                    - 3rd in Presentation
+                    - 3rd in Design Report
+                    - 2nd Overall
+                - Competes in micro class
+                    - 3/25 teams
+                    - 3rd in Design Report
+                    - 1st in Highest Payload
+                    - 3rd Overall
+                - First time doing two classes
+            - 2015
+                - Aero Design East
+                - Competes in advanced class
+                    - 1st in Design Report
+                - Competes in micro class
+                    - 2nd in Design Report
+            - 2016
+                - Aero Design East
+                - Competes in advanced class
+                    - 2nd in Design Report
+                    - 7/19
+                - Competes in micro class
+                    - 4th in Design Report
+                    - 14/19 Overall
+            - 2017
+                - Aero Design West
+                - Competes in advanced class only
+                    - 4/17
+                    - 1st in Design Report
+                    - 4th Overall
+            - 2018
+                - Aero Design East
+                - Competes in advanced class
+                    - 12/18
+            - 2019
+                - Aero Design East
+                - Competes in advanced class
+                    - 14/21
+                    - 4th in Mission Performance
+            - 2020
+                - Aero Design East
+                - Competes in advanced class
+                    - 6/20
+                    - 5th Technical Presentation
+            - 2021
+                - COVID
+                - NO COMPETITION
+            - 2022
+                - Aero Design East
+                - Competes in advanced class
+                    - Competition rules change, a primary aircraft delivers an autonmous glider aircraft
+                    - 17/18
+                    - Didn't pass inspection
+            - 2023
+                - Aero Design East
+                - Competes in advanced class
+                    - 9/14
+            - 2024
+                - Aero Design East
+                - Competes in advanced class
+                    - 6/17
+                    - 4th in Technical Presentation
+            - 2025
+                - Aero Design East
+                - Competes in advanced class
+                    - Rules change, design a VTOL package delivery aircraft that transitions between fixed wing and multi-copter
+                    - 6th in Mission
+                    - 10/14
+
+
+Website requirements:
+- The theme should be purple and white to reflect our university (Western University)
+- The theme should be light
+- The theme should not be the modern SaaS style websites, but clean, simple yet responsive and have every detail thoughout
+- The website should be multi page and not a single page
+- The website should be modular react/javascript, but only create seperate modules when it will be complex- Throughout, the website should feel responsive and interactive, so add hover effects on important things to access more detail
+    - Do not overly split the code into multiple files, if the file has very little functionality
+    - Do this with reason, but create files when the logic is different and its warrant. Just be aware of this and execute on it like a 10x facebook engineer.
+- The website should be amazing on mobile
+- Use custom css for custom animations and feel free to use it a lot
+- Execute like a 10x facebook engineer, think in detail

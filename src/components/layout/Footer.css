@@ -1,0 +1,329 @@
+.footer {
+  background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 50%, #2c1810 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.footer-pattern {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="footerGrid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="1" opacity="0.1"/></pattern></defs><rect width="60" height="60" fill="url(%23footerGrid)"/></svg>');
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-section h4 {
+  color: var(--light-purple);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Brand Section */
+.footer-brand {
+  max-width: 400px;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 0.8rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.2rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px !important;
+  height: 56px !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-link svg {
+  width: 26px !important;
+  height: 26px !important;
+}
+
+/* Links Section */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.2rem 0;
+  position: relative;
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--light-purple);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--light-purple);
+  padding-left: 0.5rem;
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+/* Contact Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.contact-item svg {
+  color: var(--light-purple);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contact-item address {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.contact-item a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-item a:hover {
+  color: var(--light-purple);
+}
+
+/* University Section */
+.footer-university {
+  text-align: center;
+}
+
+.university-logo img {
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.university-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright,
+.affiliation {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.affiliation {
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-university {
+    grid-column: 1 / -1;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  
+  .footer-brand {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-links,
+  .footer-contact {
+    text-align: center;
+  }
+  
+  .footer-nav {
+    align-items: center;
+  }
+  
+  .contact-info {
+    align-items: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 1.8rem 0;
+    gap: 1.2rem;
+  }
+  
+  .footer-logo img {
+    height: 50px;
+  }
+  
+  .university-logo img {
+    height: 45px;
+  }
+  
+  .footer-social {
+    gap: 0.8rem;
+  }
+  
+  .social-link {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  
+  .social-link svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+  
+  .contact-item {
+    font-size: 0.85rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .footer {
+    background: #1a0a2e;
+  }
+  
+  .social-link {
+    border: 2px solid white;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .social-link,
+  .footer-link {
+    transition: none;
+  }
+  
+  .social-link:hover {
+    transform: none;
+  }
+  
+  .footer-link:hover {
+    padding-left: 0;
+  }
+  
+  .footer-link::before {
+    transition: none;
+  }
+} 

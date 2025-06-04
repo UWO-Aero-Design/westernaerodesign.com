@@ -1,18 +1,50 @@
-# Western Aero Design - Website
+# Western Aero Design Website
 
-The main website for [Western Aero Design](https://westernaerodesign.com/), built using React and Tailwind.
+The official website for Western Aero Design, Western University's premier aerospace team.
 
-### Getting started
+## About
+
+Western Aero Design is a student-led aerospace team that has been designing, building, and flying innovative aircraft for over 25 years. We compete annually in the SAE Aero Design competition and represent the cutting edge of student engineering at Western University.
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/UWO-Aero-Design/aero-website
+cd aero-website
 ```
-git clone git@github.com:UWO-Aero-Design/westernaerodesign.com.git
-cd westernaerodesign.com
-npm i react-scripts
+
+2. Install dependencies
+
+```bash
+npm install
 ```
 
-### Making Changes
-Create a seperate branch to make changes on using ```git checkout -b branch-name```
-Once you've made the desired changes, run ``` npm start ``` to run the website off your machine to preview the new changes. 
+3. Start the development server
 
-### Deploying
-When you're ready to deploy your changes, run ```npm run deploy``` to create a build directory which is sent to the gh-pages branch and deployed to the live site. 
-Deploying the website deploys what's on your machine, so be sure to push your changes to the repository and create a pull request to merge your branch with the master branch. 
+
+The website will open at [http://localhost:3000](http://localhost:3000).
+
+## Available Scripts
+
+- `npm start` - Runs the development server
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+
+## Tech Stack
+
+- React
+- React Router
+- Custom CSS
+- Responsive design
+
+## Contributing
+
+This website is maintained by Western Aero Design team members. For questions or contributions, please contact the team.

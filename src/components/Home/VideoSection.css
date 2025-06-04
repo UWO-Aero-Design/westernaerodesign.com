@@ -1,0 +1,337 @@
+.video-section {
+  background-color: var(--light-gray);
+}
+
+.video-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-purple);
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.custom-video-player {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.trailer-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  cursor: pointer;
+  transform: scale(1.08);
+  transform-origin: center center;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.play-button {
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.pause-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.pause-button {
+  transition: transform 0.3s ease;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 24px 20px 20px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(4px);
+}
+
+.custom-video-player:hover .video-controls {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
+}
+
+.progress-bar:hover {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-purple), #8B5FBF);
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(139, 95, 191, 0.3);
+}
+
+.progress-bar:hover .progress-fill {
+  box-shadow: 0 0 12px rgba(139, 95, 191, 0.5);
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  border-radius: 8px;
+}
+
+.progress-handle {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 3px solid var(--primary-purple);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  box-shadow: 0 2px 12px rgba(79, 38, 131, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.6);
+  z-index: 10;
+}
+
+.progress-bar:hover .progress-handle {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 4px 16px rgba(79, 38, 131, 0.6), 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.progress-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--primary-purple);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.time-display {
+  display: flex;
+  gap: 2px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 85px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.time-display .current-time {
+  color: white;
+}
+
+.time-display .duration {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.time-display .current-time::after {
+  content: " / ";
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 1px;
+}
+
+.time-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-8px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.progress-bar:hover .time-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.video-placeholder {
+  background: linear-gradient(135deg, var(--light-purple) 0%, var(--primary-purple) 100%);
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .video-controls {
+    padding: 20px 16px 16px;
+  }
+  
+  .progress-container {
+    gap: 12px;
+  }
+  
+  .time-display {
+    font-size: 12px;
+    min-width: 75px;
+  }
+  
+  .progress-bar {
+    height: 6px;
+  }
+  
+  .progress-bar:hover {
+    height: 8px;
+  }
+  
+  .progress-handle {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
+  }
+  
+  .time-tooltip {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-controls {
+    padding: 16px 12px 12px;
+  }
+  
+  .progress-container {
+    gap: 10px;
+  }
+  
+  .time-display {
+    font-size: 11px;
+    min-width: 70px;
+  }
+  
+  .progress-handle {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .progress-bar {
+    height: 8px;
+  }
+  
+  .progress-handle {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .time-tooltip {
+    display: none;
+  }
+} 
